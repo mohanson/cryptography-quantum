@@ -1,0 +1,2 @@
+- `lamport-karlgluck.py`: [Hash Ladders for Shorter Lamport Signatures](https://gist.github.com/karlgluck/8412807)
+- `lamport.py`: [L. Lamport, Constructing digital signatures from a one-way function, Technical Report SRI-CSL-98, SRI International Computer Science Laboratory, Oct. 1979](https://www.microsoft.com/en-us/research/uploads/prod/2016/12/Constructing-Digital-Signatures-from-a-One-Way-Function.pdf)
