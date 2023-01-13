@@ -24,7 +24,7 @@ class HashList:
 
 sk = [[None for _ in range(32)] for _ in range(2)]
 pk = [[None for _ in range(32)] for _ in range(2)]
-for i in range(0, 32):
+for i in range(32):
     sk[0][i] = secrets.token_bytes(32)
     sk[1][i] = secrets.token_bytes(32)
     pk[0][i] = HashList.hash(sk[0][i], 258)
@@ -36,12 +36,12 @@ assert HashList.goto(HashList.hash(sk[0][0], 129), pk[0][0]) == 129
 raw = b'The quick brown fox jumps over the lazy dog'
 msg = hashlib.sha256(raw).digest()
 sig = [[None for _ in range(32)] for _ in range(2)]
-for i in range(0, 32):
+for i in range(32):
     n = msg[i]
     sig[0][i] = HashList.hash(sk[0][i], n + 1)
     sig[1][i] = HashList.hash(sk[1][i], 256 - n)
 
-for i in range(0, 32):
+for i in range(32):
     n = msg[i]
     ia = HashList.goto(sig[0][i], pk[0][i])
     assert ia != 257
